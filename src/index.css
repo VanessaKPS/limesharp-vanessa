@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Imports */
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: local('Gotham-Bold'),
+        url('./assets/fonts/Gotham-Bold.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: local('ProximaNova-Regular'),
+        url('./assets/fonts/ProximaNova-Regular.ttf') format('truetype');
+}
+/* Variables */
+
+:root {
+    /* font family */
+    --title-font-family: 'Gotham-Bold';
+    --body-font-family: 'ProximaNova-Regular';
+
+    /* font color */
+    --title-font-color: #ffffff;
+    --body-font-color: #56646c;
+
+    /* font size */
+    --title-font-size: 28px;
+    --block-title-font-size: 15px;
+    --body-font-size: 19px;
+
+    /* desktop font size */
+    --desktop-title-font-size: 37px;
+    --desktop-block-title-font-size: 15px;
+
+    /* line-height */
+    --line-height: 20px;
+
+    /* bg color */
+    --main-bg: #1c2026;
+    --card-body-bg: #000000;
+    --card-header-bg: #57655f;
+    --button-bg: #1c2026;
+
+    @media (min-width: 768px) {
+    }
+}
+
+/* Global Config */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family), sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: var(--body-font-size);
+    background-color: var(--main-bg);
+}
+
+h1,
+h3 {
+    font-family: var(--title-font-family), sans-serif;
+    color: var(--title-font-color);
+}
+
+h1 {
+    font-size: var(--title-font-size);
+}
+
+h3 {
+    font-size: var(--block-title-font-size);
+}
+
+p {
+    color: var(--body-font-color);
+    line-height: var(--line-height);
+}
+
+/* Media Query */
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--desktop-title-font-size);
+    }
+    h3 {
+        font-size: var(--desktop-block-title-font-size);
+    }
 }
