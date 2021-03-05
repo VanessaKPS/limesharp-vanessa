@@ -38,9 +38,6 @@
     --card-body-bg: #000000;
     --card-header-bg: #57655f;
     --button-bg: #1c2026;
-
-    @media (min-width: 768px) {
-    }
 }
 
 /* Global Config */
